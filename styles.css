@@ -19,7 +19,8 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;    
+    min-height: 100vh;
+    width: auto;    
 }
 /* Community region*/
 
@@ -30,7 +31,7 @@ main{
     width: 80%;
     background-color: white;
     border-radius: 4px 4px 0 0;
-}
+    }
 
 .community h3{
     color: hsl(179, 62%, 43%);
@@ -61,7 +62,10 @@ main{
 /* About region*/
 .about{
     width: 80%;
-    color: white
+    color: white;
+    display: flex;
+    flex-direction: column;
+
 }
 
 /*Sub box*/
@@ -116,7 +120,8 @@ main{
     font-weight: bold;
     border: 0;
     border-radius: 5px;
-    box-shadow: 0 0.05rem 0.1rem hsl(211, 60%, 50%);
+    box-shadow: 0 0.05rem 0.4rem hsl(211, 60%, 50%);
+    cursor: pointer;
 }
 
 /*Why us */
@@ -145,4 +150,46 @@ main{
 
 .why-us ul li{
     padding-bottom: 0.1rem;
+}
+
+/*desktop responsiveness*/
+
+@media (min-width: 768px) {
+
+    .container{
+        max-width: 50%;
+        margin: auto;
+    }
+
+    .community h3, #community-header, #community-text{
+        padding-left: 2rem;
+    }
+
+    .about{
+        flex-direction: row;
+    }
+    
+    .subscription{
+        width: 50%;
+        border-radius: 0 0 0 4px;
+    }
+
+    .subscription h2, .subscription h3, .subscription #access{
+        padding-left: 2rem;
+    }
+
+    .subscription button:hover{
+        background-color: white;
+        color: hsl(71, 73%, 54%); 
+        transition: 200ms;
+    }
+
+    .why-us{
+        width: 50%;
+        border-radius: 0 0 4px 0;
+    }
+
+    .why-us h2, .why-us ul{
+        padding-left: 2rem;
+    }
 }
